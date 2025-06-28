@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import shikuImg from "./assets/shiku1.jpg";
 
-
 // Placeholder image component since we can't import the actual image
 const PlaceholderImage = () => (
   <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-2xl ring-4 ring-blue-500/20 hover:ring-blue-500/40 transition-all duration-300">
@@ -71,9 +70,13 @@ function App() {
   };
 
   return (
-    <div className={`${themeClasses.text} font-sans ${themeClasses.bg} min-h-screen transition-colors duration-300`}>
+    <div
+      className={`${themeClasses.text} font-sans ${themeClasses.bg} min-h-screen transition-colors duration-300`}
+    >
       {/* Fixed Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 w-full ${themeClasses.navBg} backdrop-blur-md z-50 border-b ${themeClasses.navBorder} transition-colors duration-300`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 w-full ${themeClasses.navBg} backdrop-blur-md z-50 border-b ${themeClasses.navBorder} transition-colors duration-300`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -82,7 +85,7 @@ function App() {
                 href="#home"
                 className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors"
               >
-                MyPortfolio
+               SHIKU
               </a>
             </div>
 
@@ -102,7 +105,7 @@ function App() {
                   )
                 )}
               </div>
-              
+
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
@@ -110,12 +113,32 @@ function App() {
                 aria-label="Toggle theme"
               >
                 {isDarkMode ? (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
                   </svg>
                 ) : (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
                   </svg>
                 )}
               </button>
@@ -130,16 +153,36 @@ function App() {
                 aria-label="Toggle theme"
               >
                 {isDarkMode ? (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
                   </svg>
                 ) : (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
                   </svg>
                 )}
               </button>
-              
+
               <button
                 id="nav-toggle"
                 className={`${themeClasses.text} hover:text-blue-400 p-2 rounded-md transition-colors`}
@@ -190,16 +233,22 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="text-center lg:text-left">
-              <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold ${themeClasses.textPrimary} leading-tight mb-6`}>
+              <h1
+                className={`text-4xl sm:text-5xl lg:text-6xl font-bold ${themeClasses.textPrimary} leading-tight mb-6`}
+              >
                 Hi, I'm{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
                   Shaquib Ahmad
                 </span>
               </h1>
-              <h2 className={`text-xl sm:text-2xl lg:text-3xl font-medium ${themeClasses.text} mb-6`}>
+              <h2
+                className={`text-xl sm:text-2xl lg:text-3xl font-medium ${themeClasses.text} mb-6`}
+              >
                 A Passionate Web Developer
               </h2>
-              <p className={`text-lg ${themeClasses.textSecondary} mb-8 max-w-2xl`}>
+              <p
+                className={`text-lg ${themeClasses.textSecondary} mb-8 max-w-2xl`}
+              >
                 Crafting beautiful and performant web experiences using modern
                 technologies like React, Three.js, and Tailwind CSS.
               </p>
@@ -222,13 +271,13 @@ function App() {
             {/* Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative" id="hero-image">
-                 <img
-                                  id="hero-image"
-                                  src={shikuImg}
-                                  alt="Shaquib Ahmad"
-                                  className="w-80 h-80 rounded-full object-cover shadow-2xl ring-4 ring-blue-500/20 hover:ring-blue-500/40 transition-all duration-300"
-                                />
-                              
+                <img
+                  id="hero-image"
+                  src={shikuImg}
+                  alt="Shaquib Ahmad"
+                  className="w-80 h-80 rounded-full object-cover shadow-2xl ring-4 ring-blue-500/20 hover:ring-blue-500/40 transition-all duration-300"
+                />
+
                 {/* <PlaceholderImage /> */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-300"></div>
               </div>
@@ -238,13 +287,20 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className={`py-20 px-4 sm:px-6 lg:px-8 ${themeClasses.cardBg} transition-colors duration-300`}>
+      <section
+        id="skills"
+        className={`py-20 px-4 sm:px-6 lg:px-8 ${themeClasses.cardBg} transition-colors duration-300`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}>
+            <h2
+              className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}
+            >
               My Skills
             </h2>
-            <p className={`${themeClasses.textSecondary} text-lg max-w-2xl mx-auto`}>
+            <p
+              className={`${themeClasses.textSecondary} text-lg max-w-2xl mx-auto`}
+            >
               Technologies and tools I use to bring ideas to life
             </p>
           </div>
@@ -256,9 +312,9 @@ function App() {
                 desc: "ES6+, DOM manipulation, and async programming",
               },
               {
-                title: "React",
+                title: "Nodejs",
                 color: "from-blue-400 to-cyan-500",
-                desc: "Building dynamic UI components and SPAs",
+                desc: "Server side Integration",
               },
               {
                 title: "Three.js",
@@ -269,6 +325,56 @@ function App() {
                 title: "Tailwind CSS",
                 color: "from-green-400 to-teal-500",
                 desc: "Utility-first CSS framework for rapid development",
+              },
+              {
+                title: "Express js",
+                color: "from-yellow-400 to-orange-500",
+                desc: "Node js Framework for building modern apps",
+              },
+              {
+                title: "MongoDb",
+                color: "from-green-400 to-teal-500",
+                desc: "Document based database",
+              },
+              {
+                title: "EJS",
+                color: "from-purple-400 to-pink-500",
+                desc: "Embedded JavaScript templating",
+              },
+              {
+                title: "Git Bash",
+                color: "from-gray-700 to-gray-900",
+                desc: "Command line interface for Git",
+              },
+              {
+                title: "HTML",
+                color: "from-orange-400 to-red-500",
+                desc: "Markup language for creating web pages",
+              },
+              {
+                title: "CSS",
+                color: "from-blue-400 to-indigo-500",
+                desc: "Style sheet language for designing web pages",
+              },
+              {
+                title: "Bootstrap",
+                color: "from-purple-500 to-blue-500",
+                desc: "Front-end framework for responsive design",
+              },
+              {
+                title: "Linux",
+                color: "from-yellow-500 to-amber-600",
+                desc: "Open-source Unix-based operating system",
+              },
+              {
+                title: "JWT",
+                color: "from-red-400 to-yellow-500",
+                desc: "JSON Web Token for secure authentication",
+              },
+              {
+                title: "Passport.js",
+                color: "from-sky-500 to-blue-600",
+                desc: "Middleware for authentication in Node.js",
               },
             ].map((skill) => (
               <div
@@ -282,10 +388,14 @@ function App() {
                     {skill.title[0]}
                   </span>
                 </div>
-                <h3 className={`text-xl font-semibold ${themeClasses.textPrimary} mb-2`}>
+                <h3
+                  className={`text-xl font-semibold ${themeClasses.textPrimary} mb-2`}
+                >
                   {skill.title}
                 </h3>
-                <p className={`${themeClasses.textSecondary} text-sm`}>{skill.desc}</p>
+                <p className={`${themeClasses.textSecondary} text-sm`}>
+                  {skill.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -296,36 +406,52 @@ function App() {
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}>
+            <h2
+              className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}
+            >
               About Me
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className={`${themeClasses.textSecondary} text-lg leading-relaxed mb-6`}>
+              <p
+                className={`${themeClasses.textSecondary} text-lg leading-relaxed mb-6`}
+              >
                 I'm{" "}
                 <span className="text-blue-400 font-semibold">
                   Shaquib Ahmad
                 </span>
-                , a passionate web developer with a knack for building immersive
-                digital experiences. My expertise lies in front-end development,
-                creating responsive and engaging interfaces with modern tools
-                and frameworks.
+               , a passionate full-stack web developer with a
+                focus on building secure, scalable, and user-centric web
+                applications. My skill set bridges both frontend and backend
+                development — from crafting responsive interfaces to
+                implementing robust authentication systems.
               </p>
-              <p className={`${themeClasses.textSecondary} text-lg leading-relaxed mb-6`}>
-                I specialize in React, Three.js, and modern CSS frameworks to
-                create websites that not only look great but also provide
-                exceptional user experiences.
+              <p
+                className={`${themeClasses.textSecondary} text-lg leading-relaxed mb-6`}
+              >
+                I specialize in HTML, CSS, Bootstrap, EJS, and modern frontend
+                practices, while also working extensively with MongoDB, JWT,
+                Passport.js, and bcrypt to deliver secure backend solutions. My
+                proficiency with tools like Git Bash and Linux ensures smooth,
+                terminal-based development workflows and effective version
+                control using GitHub.
               </p>
-              <p className={`${themeClasses.textSecondary} text-lg leading-relaxed`}>
-                When I'm not coding, I enjoy exploring new technologies,
-                contributing to open-source projects, and staying up-to-date
-                with the latest web development trends.
+              <p
+                className={`${themeClasses.textSecondary} text-lg leading-relaxed`}
+              >
+                When I'm not coding, I explore emerging web technologies,
+                contribute to open-source projects, and stay updated on the
+                latest trends in full-stack development.
               </p>
             </div>
             <div className="flex justify-center">
-              <div className={`${themeClasses.cardBg} rounded-xl p-8 ${themeClasses.cardHover} transition-colors`}>
-                <h3 className={`text-xl font-semibold ${themeClasses.textPrimary} mb-4`}>
+              <div
+                className={`${themeClasses.cardBg} rounded-xl p-8 ${themeClasses.cardHover} transition-colors`}
+              >
+                <h3
+                  className={`text-xl font-semibold ${themeClasses.textPrimary} mb-4`}
+                >
                   Quick Facts
                 </h3>
                 <ul className={`space-y-2 ${themeClasses.textSecondary}`}>
@@ -335,7 +461,7 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                    React Specialist
+                   Mern stack dev
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
@@ -343,7 +469,15 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                    Open Source Contributor
+                    Open Source Contributor ,  <span className="font-semibold">Github</span>
+                  </li>
+                   <li className="flex items-center">
+                    <span className="w-2 h-2 bg-orange-600 rounded-full mr-3"></span>
+                   Restfull APIs
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                   CURD App
                   </li>
                 </ul>
               </div>
@@ -359,10 +493,14 @@ function App() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}>
+            <h2
+              className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}
+            >
               My Projects
             </h2>
-            <p className={`${themeClasses.textSecondary} text-lg max-w-2xl mx-auto`}>
+            <p
+              className={`${themeClasses.textSecondary} text-lg max-w-2xl mx-auto`}
+            >
               A showcase of my recent work and creative endeavors
             </p>
           </div>
@@ -386,7 +524,7 @@ function App() {
                 desc: "Full-stack e-commerce solution with payment integration and admin dashboard.",
                 gradient: "from-purple-500 to-pink-600",
               },
-               {
+              {
                 title: "Mern Auth App",
                 tech: " Node.js",
                 desc: "Using Express server for to authenticate the users",
@@ -408,10 +546,14 @@ function App() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className={`text-xl font-semibold ${themeClasses.textPrimary} mb-2`}>
+                  <h3
+                    className={`text-xl font-semibold ${themeClasses.textPrimary} mb-2`}
+                  >
                     {project.title}
                   </h3>
-                  <p className={`${themeClasses.textSecondary} mb-4`}>{project.desc}</p>
+                  <p className={`${themeClasses.textSecondary} mb-4`}>
+                    {project.desc}
+                  </p>
                   <div className="flex space-x-4">
                     <a
                       href="#"
@@ -460,7 +602,9 @@ function App() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}>
+            <h2
+              className={`text-3xl sm:text-4xl font-bold ${themeClasses.textPrimary} mb-4`}
+            >
               Get In Touch
             </h2>
             <p className={`${themeClasses.textSecondary} text-lg`}>
@@ -469,7 +613,9 @@ function App() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className={`text-xl font-semibold ${themeClasses.textPrimary} mb-6`}>
+              <h3
+                className={`text-xl font-semibold ${themeClasses.textPrimary} mb-6`}
+              >
                 Let's Connect
               </h3>
               <div className="space-y-4">
@@ -485,8 +631,12 @@ function App() {
                     </svg>
                   </div>
                   <div>
-                    <p className={`${themeClasses.textPrimary} font-medium`}>Email</p>
-                    <p className={themeClasses.textSecondary}>shaquibahmad21@gmail.com</p>
+                    <p className={`${themeClasses.textPrimary} font-medium`}>
+                      Email
+                    </p>
+                    <p className={themeClasses.textSecondary}>
+                      shaquibahmad21@gmail.com
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -504,16 +654,22 @@ function App() {
                     </svg>
                   </div>
                   <div>
-                    <p className={`${themeClasses.textPrimary} font-medium`}>Location</p>
+                    <p className={`${themeClasses.textPrimary} font-medium`}>
+                      Location
+                    </p>
                     <p className={themeClasses.textSecondary}>Patna, Bihar</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className={`${themeClasses.cardBg} rounded-xl p-8 transition-colors duration-300`}>
+            <div
+              className={`${themeClasses.cardBg} rounded-xl p-8 transition-colors duration-300`}
+            >
               <div className="space-y-6">
                 <div>
-                  <label className={`block ${themeClasses.textPrimary} font-medium mb-2`}>
+                  <label
+                    className={`block ${themeClasses.textPrimary} font-medium mb-2`}
+                  >
                     Name
                   </label>
                   <input
@@ -523,7 +679,9 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label className={`block ${themeClasses.textPrimary} font-medium mb-2`}>
+                  <label
+                    className={`block ${themeClasses.textPrimary} font-medium mb-2`}
+                  >
                     Email
                   </label>
                   <input
@@ -533,7 +691,9 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label className={`block ${themeClasses.textPrimary} font-medium mb-2`}>
+                  <label
+                    className={`block ${themeClasses.textPrimary} font-medium mb-2`}
+                  >
                     Message
                   </label>
                   <textarea
@@ -556,7 +716,9 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className={`${themeClasses.footerBg} py-12 px-4 sm:px-6 lg:px-8 border-t ${themeClasses.footerBorder} transition-colors duration-300`}>
+      <footer
+        className={`${themeClasses.footerBg} py-12 px-4 sm:px-6 lg:px-8 border-t ${themeClasses.footerBorder} transition-colors duration-300`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -568,7 +730,9 @@ function App() {
               </p>
             </div>
             <div>
-              <h4 className={`${themeClasses.textPrimary} font-semibold mb-4`}>Quick Links</h4>
+              <h4 className={`${themeClasses.textPrimary} font-semibold mb-4`}>
+                Quick Links
+              </h4>
               <ul className="space-y-2">
                 {["Home", "Skills", "About", "Projects", "Contact"].map(
                   (item) => (
@@ -585,7 +749,9 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className={`${themeClasses.textPrimary} font-semibold mb-4`}>Follow Me</h4>
+              <h4 className={`${themeClasses.textPrimary} font-semibold mb-4`}>
+                Follow Me
+              </h4>
               <div className="flex space-x-4">
                 <a
                   href="https://www.github.com/Imshiku"
@@ -604,7 +770,7 @@ function App() {
                 </a>
 
                 {/* Linkedin  */}
-              
+
                 <a
                   href="https://www.linkedin.com/in/shaquib-ahmad-53a7a2269"
                   target="_blank"
@@ -623,7 +789,9 @@ function App() {
               </div>
             </div>
           </div>
-          <div className={`border-t ${themeClasses.footerBorder} mt-8 pt-8 text-center transition-colors duration-300`}>
+          <div
+            className={`border-t ${themeClasses.footerBorder} mt-8 pt-8 text-center transition-colors duration-300`}
+          >
             <p className={themeClasses.textSecondary}>
               © 2025 Shaquib Ahmad. All rights reserved. Built with ❤️ using
               React & Tailwind CSS
