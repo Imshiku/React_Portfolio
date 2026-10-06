@@ -1,0 +1,7 @@
+function ContactPage({ dark, headingClass, mutedClass, surfaceClass, borderClass }) {
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSent(true);
+  };
