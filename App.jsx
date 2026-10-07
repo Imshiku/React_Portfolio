@@ -17,6 +17,7 @@ import {
   FiSend,
   FiSun,
   FiX,
+  FiFileText,
 } from "react-icons/fi";
 
 const projects = [
@@ -29,6 +30,15 @@ const projects = [
     link: "https://hunterfitnessgym.com/",
     featured: true,
   },
+  {
+  title: "AI-HUB",
+  eyebrow: "Full-Stack AI Project",
+  description:
+    "A full-stack AI Hub application providing access to multiple AI-powered tools through a responsive and user-friendly interface.",
+  tags: ["React", "Node.js", "Express.js", "AI Tools"],
+  link: "https://free-ai-hub-theta.vercel.app/",
+  featured: true,
+},
   {
     title: "E-commerce Platform",
     eyebrow: "Full-Stack Project",
@@ -171,12 +181,21 @@ function ProjectCard({ project, dark, index }) {
               Project details available on request
             </span>
           )}
-          {project.title === "MERN Auth App" && (
+           {(project.title === "MERN Auth App" ||
+            project.title === "AI-HUB") && (
             <a
-              href="https://github.com/Imshiku/mern-auth-backend"
+              href={
+                project.title === "AI-HUB"
+                  ? "https://github.com/Imshiku/free-ai-hub"
+                  : "https://github.com/Imshiku/mern-auth-backend"
+              }
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 text-sm font-semibold ${dark ? "text-slate-300 hover:text-white" : "text-slate-700 hover:text-slate-950"}`}
+              className={`inline-flex items-center gap-2 text-sm font-semibold ${
+                dark
+                  ? "text-slate-300 hover:text-white"
+                  : "text-slate-700 hover:text-slate-950"
+              }`}
             >
               <FiGithub /> Code
             </a>
@@ -232,68 +251,109 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${pageClass}`}>
-      <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl ${dark ? "border-slate-800/80 bg-[#080d18]/85" : "border-slate-200/80 bg-white/85"}`}>
-        <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10" aria-label="Main navigation">
-          <AppLink to="/" className="group flex items-center gap-3">
-            <span className={`grid h-10 w-10 place-items-center rounded-xl border text-sm font-bold transition ${dark ? "border-slate-700 bg-slate-900 text-white group-hover:border-blue-500" : "border-slate-200 bg-slate-50 text-slate-950 group-hover:border-blue-400"}`}>
-              SA
-            </span>
-            <span className={`hidden text-sm font-semibold sm:block ${headingClass}`}>Shaquib Ahmad</span>
+ <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl ${dark ? "border-slate-800/80 bg-[#080d18]/85" : "border-slate-200/80 bg-white/85"}`}>
+  <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10" aria-label="Main navigation">
+    
+    <AppLink to="/" className="group flex items-center gap-3">
+      <span className={`grid h-10 w-10 place-items-center rounded-xl border text-sm font-bold transition ${dark ? "border-slate-700 bg-slate-900 text-white group-hover:border-blue-500" : "border-slate-200 bg-slate-50 text-slate-950 group-hover:border-blue-400"}`}>
+        SA
+      </span>
+      <span className={`hidden text-sm font-semibold sm:block ${headingClass}`}>
+        Shaquib Ahmad
+      </span>
+    </AppLink>
+
+    <div className="hidden items-center gap-1 md:flex">
+      {navItems.map((item) => (
+        <AppLink
+          key={item.path}
+          to={item.path}
+          className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
+            path === item.path
+              ? "bg-blue-500/10 text-blue-500"
+              : `${mutedClass} hover:bg-slate-500/5 hover:text-blue-500`
+          }`}
+        >
+          {item.label}
+        </AppLink>
+      ))}
+    </div>
+
+    <div className="flex items-center gap-2">
+
+      {/* CV Button */}
+      <a
+        href="/public/Md_Shaquib_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`hidden sm:inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition ${
+          dark
+            ? "border-blue-500/50 bg-blue-500/10 text-blue-400 hover:border-blue-400 hover:bg-blue-500/20"
+            : "border-blue-300 bg-blue-50 text-blue-600 hover:border-blue-400 hover:bg-blue-100"
+        }`}
+      >
+        <FiFileText />
+        View CV
+      </a>
+
+      {/* Theme Button */}
+      <button
+        type="button"
+        onClick={() => setIsDarkMode((value) => !value)}
+        aria-label="Toggle theme"
+        className={`grid h-10 w-10 place-items-center rounded-xl border transition ${borderClass} ${mutedClass} hover:text-blue-500`}
+      >
+        {dark ? <FiSun /> : <FiMoon />}
+      </button>
+
+      {/* Mobile Menu Button */}
+      <button
+        type="button"
+        onClick={() => setMenuOpen((value) => !value)}
+        className={`grid h-10 w-10 place-items-center rounded-xl border md:hidden ${borderClass} ${mutedClass}`}
+        aria-label="Toggle navigation"
+      >
+        {menuOpen ? <FiX /> : <FiMenu />}
+      </button>
+
+    </div>
+  </nav>
+
+  {menuOpen && (
+    <div className={`border-t px-5 py-4 md:hidden ${borderClass} ${dark ? "bg-[#080d18]" : "bg-white"}`}>
+      <div className="mx-auto max-w-7xl space-y-1">
+
+        {navItems.map((item) => (
+          <AppLink
+            key={item.path}
+            to={item.path}
+            onClick={() => setMenuOpen(false)}
+            className={`block rounded-lg px-4 py-3 text-sm font-medium ${
+              path === item.path
+                ? "bg-blue-500/10 text-blue-500"
+                : mutedClass
+            }`}
+          >
+            {item.label}
           </AppLink>
+        ))}
 
-          <div className="hidden items-center gap-1 md:flex">
-            {navItems.map((item) => (
-              <AppLink
-                key={item.path}
-                to={item.path}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
-                  path === item.path
-                    ? "bg-blue-500/10 text-blue-500"
-                    : `${mutedClass} hover:bg-slate-500/5 hover:text-blue-500`
-                }`}
-              >
-                {item.label}
-              </AppLink>
-            ))}
-          </div>
+        {/* Mobile CV Button */}
+        <a
+          href="/public/Md_Shaquib_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMenuOpen(false)}
+          className="mt-2 flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500/10"
+        >
+          <FiFileText />
+          View CV
+        </a>
 
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setIsDarkMode((value) => !value)}
-              aria-label="Toggle theme"
-              className={`grid h-10 w-10 place-items-center rounded-xl border transition ${borderClass} ${mutedClass} hover:text-blue-500`}
-            >
-              {dark ? <FiSun /> : <FiMoon />}
-            </button>
-            <button
-              type="button"
-              onClick={() => setMenuOpen((value) => !value)}
-              className={`grid h-10 w-10 place-items-center rounded-xl border md:hidden ${borderClass} ${mutedClass}`}
-              aria-label="Toggle navigation"
-            >
-              {menuOpen ? <FiX /> : <FiMenu />}
-            </button>
-          </div>
-        </nav>
-
-        {menuOpen && (
-          <div className={`border-t px-5 py-4 md:hidden ${borderClass} ${dark ? "bg-[#080d18]" : "bg-white"}`}>
-            <div className="mx-auto max-w-7xl space-y-1">
-              {navItems.map((item) => (
-                <AppLink
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setMenuOpen(false)}
-                  className={`block rounded-lg px-4 py-3 text-sm font-medium ${path === item.path ? "bg-blue-500/10 text-blue-500" : mutedClass}`}
-                >
-                  {item.label}
-                </AppLink>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
+      </div>
+    </div>
+  )}
+</header>
 
       <main className="pt-[76px]">
         {currentPage === "home" && (
