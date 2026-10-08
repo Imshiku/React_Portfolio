@@ -402,9 +402,13 @@ function HomePage({ dark, headingClass, mutedClass, surfaceClass, borderClass, g
               <AppLink to="/projects" className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/15 transition hover:bg-blue-500">
                 Explore My Work <FiArrowRight />
               </AppLink>
-              <a href="mailto:shaquibahmad21@gmail.com" className={`inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3.5 text-sm font-semibold transition ${borderClass} ${headingClass} hover:border-blue-500 hover:text-blue-500`}>
+              <a 
+                href="https://google.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3.5 text-sm font-semibold transition ${borderClass} ${headingClass} hover:border-blue-500 hover:text-blue-500`}>
                 <FiMail /> Let's Connect
-              </a>
+                </a>
             </div>
             <div className={`mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm ${mutedClass}`}>
               <span className="inline-flex items-center gap-2"><FiCode className="text-blue-500" /> Web Development</span>
