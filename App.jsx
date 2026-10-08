@@ -283,7 +283,7 @@ function App() {
 
       {/* CV Button */}
       <a
-        href="/MD_Shaquib_Resume.pdf"
+        href="/Md_Shaquib_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={`hidden sm:inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition ${
@@ -340,7 +340,7 @@ function App() {
 
         {/* Mobile CV Button */}
         <a
-          href="/MD_Shaquib_Resume.pdf"
+          href="/Md_Shaquib_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setMenuOpen(false)}
